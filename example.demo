@@ -1,0 +1,10 @@
+#This is an example input file showing rules of specifying an assignment 
+
+#Lines after '#' is commented
+#The matrix should be square matrix, i.e.,  n X n, 
+  8 10 -4.5    # allow float and negative
+abc  12   6    # non-num "abc" is converted to 0
+ 18    -3  5.138
+
+ 
+

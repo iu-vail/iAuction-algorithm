@@ -1,0 +1,67 @@
+#
+# PLEASE READ THIS FILE FIRST.
+#
+# This is a centralized version of an optimal assignment algorithm based on 
+# our paper "Optimal Market-based Multi-Robot Task Allocation via Strategic 
+# Pricing" published in RSS 2013. The algorithm is written in C++
+# (using STL as main data structures). 
+#
+# The algorithm assumes the input a MAXIMIZATION problem.
+# 
+# The time complexity of this implementation is O(N^3 lg N), but is tested  
+# faster than other algorithms of the same time complexity. (Make sure the
+# DEBUG mode is turned off when running large size problem!)
+
+# Moreover, this algorithm in nature can be decentralized.
+
+# You can freely use this code, and we are grateful if you can cite our work:
+# Or other related work posted on my page: http://students.cse.tamu.edu/lantao/
+#
+# Lantao Liu, <lantao@cse.tamu.edu>
+# Dept. of Computer Science and Engineering, 
+# Texas A&M University, TX, 77843-3112.
+# Apr 15, 2013.
+#
+
+
+# -----------------------------------------------
+
+# The code has been tested in Ubuntu 10.04+ and Mac OS 10.5., with gcc4.3.3.
+
+To compile, just type 'make'
+To clean, just type 'make clean'
+
+! Micros of DEBUG in Define.h can toggle the debug mode;
+! Micros of INTEGER in Define.h can toggle the data types of random values;
+! Micros of MAX_RANDOM in Define.h specifies the max random values;
+
+Command Line:
+Type "./iAuction -h" to prompt below usage options.
+
+	./iAuction
+		-i <file>       #specify <file> which assignment will be 
+				#imported from. <file> contains a matrix.
+				#Default: randomly generating assingment
+		-s <size_t>     #use random generator instead of input file,
+				#<size_t> should specify seed for generator,
+				#this helps analyze one specific assignment
+				#Default: time(Null)
+		-n <size_t>	#if use random generator, tell me the size
+				#Default: 5x5
+
+				#The random generater by default can genenerate
+				#natrual number from 0 to 100. You can grep and
+				#change macro MAX_RANDOM for other values
+				
+
+For instance:
+	./iAuction
+		run iAuction with a 5x5 random assignment everytime.
+	./iAuction -i example
+		run iAuction on this example assignment
+	./iAuction -s 10 
+		run iAuction with random seed 10, on a default 5x5 assignment
+	./iAuction -s 10 -n 20
+		run iAuction with random seed 10, on a 20x20 assignment
+	
+
