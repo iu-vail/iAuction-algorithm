@@ -14,14 +14,12 @@
 
 # Moreover, this algorithm in nature can be decentralized.
 
-# You can freely use this code, and we are grateful if you can cite our work:
-# Or other related work posted on my page: http://students.cse.tamu.edu/lantao/
-#
-# Lantao Liu, <lantao@cse.tamu.edu>
-# Dept. of Computer Science and Engineering, 
-# Texas A&M University, TX, 77843-3112.
-# Apr 15, 2013.
-#
+# 11/2012
+
+# Last update: on 6/2018
+# The code was written in 2009, but still compiled and worked like a charm on the latest linux system.
+# Papers and related work can be found at http://vail.sice.indiana.edu
+# Lantao Liu, <lantao@iu.edu>
 
 
 # -----------------------------------------------
